@@ -1,0 +1,25 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    >
+
+        <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/client"
+        android:id="@+id/btn_client"
+        android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom" />
+
+        <Button
+         android:layout_width="405dp"
+         android:layout_height="wrap_content"
+        android:text="@string/server"
+        android:id="@+id/btn_server"
+        android:layout_alignParentBottom="true"
+        android:layout_weight="0.08"
+        android:layout_gravity="bottom"
+        />
+
+</LinearLayout>

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/info"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:maxLines = "20"
+        android:scrollbars = "vertical"
+        android:lines="2"
+        android:gravity="bottom"
+        />
+
+    <EditText
+        android:id="@+id/eingabeEditText"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:hint="@string/eingabe"
+        android:background="@android:color/darker_gray"
+        android:inputType="text"/>
+
+    <ImageButton
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:text="@string/spracheButton"
+        android:contentDescription="@string/desc"
+        android:id="@+id/voiceButton"
+        android:background="@null"
+        android:src="@android:drawable/ic_btn_speak_now"/>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        >
+
+        <ToggleButton
+            android:id="@+id/listenerButton"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textOn="@string/listenerAN"
+            android:textOff="@string/listenerOFF"
+            android:onClick="onToggleClicked"
+            android:background="@android:color/background_dark" />
+
+
+        <Button
+            android:id="@+id/sendeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/senden"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
