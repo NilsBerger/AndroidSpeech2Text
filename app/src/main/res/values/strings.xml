@@ -19,4 +19,7 @@
 
     <string name="spracheButton">Sprache</string>
     <string name="desc">Start Voice Record</string>
+
+
+    <string name="info">Starten sie erst diese App, bevor Sie die Google Glass App öffnen!</string>
 </resources>

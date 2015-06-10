@@ -39,6 +39,7 @@ public class ClassicBluetoothServer extends Activity {
 	public final static String TAG = "ClassicBluetoothServer";
 	BluetoothAdapter mBluetoothAdapter;
 	BluetoothServerSocket mBluetoothServerSocket;
+	//final SpeechRecognizer speechRecognizer;
 
 	public static final int MAX_LINES = 30;
 	public static final int REQUEST_TO_START_BT = 100;
@@ -81,6 +82,8 @@ public class ClassicBluetoothServer extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.cbslayout);
+
+
 		mTvInfo = (TextView) findViewById(R.id.info);
 		mTvInfo.setMovementMethod(new ScrollingMovementMethod());
 		eingabeTextEdit = (EditText) findViewById(R.id.eingabeEditText);
@@ -133,9 +136,10 @@ public class ClassicBluetoothServer extends Activity {
 				boolean on = ((ToggleButton) v).isChecked();
 
 				if (on) {
-					Toast.makeText(getApplicationContext(), "on", Toast.LENGTH_SHORT);
+					Toast.makeText(getApplicationContext(), "on", Toast.LENGTH_SHORT).show();
+
 				} else {
-					Toast.makeText(getApplicationContext(), "off", Toast.LENGTH_SHORT);
+					Toast.makeText(getApplicationContext(), "off", Toast.LENGTH_SHORT).show();
 				}
 
 			}
@@ -162,8 +166,9 @@ public class ClassicBluetoothServer extends Activity {
 			}
 		}
 	}
-    public void writeText(String data){
-        mTvInfo.append(data + System.getProperty("line.separator"));
+
+	public void writeText(String data) {
+		mTvInfo.append(data + System.getProperty("line.separator"));
 
         int linienAnzahl = mTvInfo.getLineCount() - MAX_LINES;
         if(linienAnzahl > 0) {
